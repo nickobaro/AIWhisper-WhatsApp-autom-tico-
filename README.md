@@ -1,40 +1,65 @@
 # AIWhisper: The World's First Revolutionary AI-Powered WhatsApp Automation Suite
 
-![AIWhisper Logo](https://via.placeholder.com/1200x600?text=AIWhisper)  
 
-**AIWhisper** is the groundbreaking, cutting-edge AI-driven WhatsApp bot platform that redefines messaging automation. As the world's first intelligent, autonomous conversational AI for WhatsApp, AIWhisper leverages state-of-the-art generative AI (powered by Gemini) and seamless integration with Baileys to deliver hyper-personalized, context-aware responses at scale. Experience the future of chat automation with quantum-level efficiency, neural network intelligence, and blockchain-inspired security – all in one revolutionary package!
+**AIWhisper** is the groundbreaking, cutting-edge AI-driven WhatsApp bot platform that redefines messaging automation. As the world's first intelligent, autonomous conversational AI for WhatsApp, AIWhisper leverages state-of-the-art generative AI (powered by Gemini) and seamless integration with Baileys to deliver hyper-personalized, context-aware responses at scale. Built with Next.js and integrated with Google's Gemini AI, it enables businesses and developers to create intelligent WhatsApp bots that can handle customer inquiries, provide support, and automate messaging workflows.
+
+<img width="1145" height="686" alt="image" src="https://github.com/user-attachments/assets/ea31d356-2a2e-4ac2-92c6-19c80f4f4813" />
+
 
 ## Why AIWhisper? The Unique Edge
 - **World's First AI-Native WhatsApp Orchestrator**: Unlike traditional bots, AIWhisper's symbiotic fusion of Next.js frontend, Genkit AI backend, and real-time WhatsApp connectivity creates an unprecedented ecosystem for smart messaging.
-- **Buzzword-Packed Innovation**: Harness disruptive technologies like machine learning, natural language processing, and adaptive learning algorithms to transform ordinary chats into intelligent conversations.
-- **Maximum GitHub Traction Potential**: Designed for virality with open-source ethos, comprehensive docs, and demo-ready setup to attract stars, forks, and contributions.
+- **Intelligent Responses**: Context-aware replies using Gemini AI
+- **Easy Setup**: QR code authentication with WhatsApp Web
+- **Scalable Architecture**: Built on modern web technologies
+- **Real-time Analytics**: Track conversations and bot performance
+- **Multi-agent Support**: Deploy multiple AI agents with different personalities
+  
+## Features
 
-## Key Features
-- **AI-Powered Auto-Responses**: Generate dynamic replies using advanced Gemini AI models.
-- **QR Code Login**: Seamless WhatsApp authentication with secure QR scanning.
-- **Agent Management**: Create and deploy multiple AI agents with custom rules and fallback behaviors.
-- **Knowledge Base Integration**: Embed domain-specific intelligence for specialized responses.
-- **Real-Time Analytics**: Track messages, stats, and logs with beautiful Recharts visualizations.
-- **Multi-Modal Support**: Handle text, images, and more with Jimp and PDF.js.
-- **Secure & Scalable**: Built on Next.js 15 with Radix UI for a modern, responsive dashboard.
+### Core Functionality
+- ✅ **AI-Powered Responses** - Gemini AI integration for natural conversations
+- ✅ **WhatsApp Integration** - Seamless connection via Baileys library
+- ✅ **Agent Management** - Create and configure multiple AI personalities
+- ✅ **Knowledge Base** - Upload documents for context-specific responses
+- ✅ **QR Code Authentication** - Secure WhatsApp Web login
 
-## Installation
+### Dashboard & Analytics
+- ✅ **Real-time Monitoring** - Live message tracking and statistics
+- ✅ **Response Analytics** - Performance metrics with Recharts visualizations
+- ✅ **Message History** - Complete conversation logs
+- ✅ **User Management** - Role-based access control
+
+### Technical Features
+- ✅ **Multi-modal Support** - Text, images, and document processing
+- ✅ **Responsive Design** - Built with Radix UI components
+- ✅ **API-First Architecture** - RESTful API for integrations
+- ✅ **Environment Configuration** - Easy deployment and configuration
+
+<img width="1440" height="726" alt="image2" src="https://github.com/user-attachments/assets/67bfd25a-e7e8-4c10-a771-b89b311af252" />
+
+## Quick Start
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn package manager
+- Google Gemini API key
+
+### Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/aiwhisper.git
-   cd aiwhisper
+   git clone https://github.com/usualdork/AIWhisper.git
+   cd AiWhisper
    ```
-
 2. Install dependencies:
    ```bash
    npm install
-  ```
-
+   ```
 3. Set up environment:
+   ```bash
    - Copy `.env.example` to `.env`
    - Add your `GEMINI_API_KEY`
-
+   ```
 4. Run development server:
    ```bash
    npm run dev
@@ -51,20 +76,33 @@
 3. Configure agents in the Agent Designer.
 4. Start receiving and auto-responding to messages!
 
-For detailed API docs, check `/docs/blueprint.md`.
+<img width="1438" height="720" alt="image3" src="https://github.com/user-attachments/assets/27b1365c-d78c-4230-9c2a-143cd7df7554" />
 
-## Screenshots
+## Architecture
 
-![Dashboard](https://via.placeholder.com/800x400?text=AIWhisper+Dashboard)
-![Agent Designer](https://via.placeholder.com/800x400?text=Agent+Designer)
+### Technology Stack
+- **Frontend**: Next.js 15, Radix UI, TailwindCSS
+- **Backend**: Node.js, Genkit AI framework
+- **AI**: Google Gemini Pro/Flash models
+- **WhatsApp**: Baileys WebSocket library
+- **Storage**: File-based session management
+- **Analytics**: Recharts for data visualization
+
 
 ## Roadmap
-- Integrate more AI models
-- Add voice message support
-- Implement team collaboration features
+
+- [ ] Voice message transcription and response
+- [ ] Multi-language support beyond English
+- [ ] Team collaboration features
+- [ ] Webhook integrations
+- [ ] Advanced analytics dashboard
+- [ ] Mobile app for management
 
 ## Credits
-Special thanks to [@whiskeysockets/baileys](https://github.com/WhiskeySockets/Baileys) for the powerful WhatsApp socket library that powers our connectivity.
+
+- [Baileys](https://github.com/whiskeysockets/baileys) - WhatsApp Web API
+- [Google Gemini](https://ai.google.dev/) - AI language models
+- [Next.js](https://nextjs.org/) - React framework
 
 ## Contributing
 We welcome contributions! Fork the repo, create a feature branch, and submit a pull request. Let's build the future of AI messaging together.
