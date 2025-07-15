@@ -1,11 +1,11 @@
-# WPBot: The World's First Revolutionary AI-Powered WhatsApp Automation Suite
+# AIWhisper: The World's First Revolutionary AI-Powered WhatsApp Automation Suite
 
-![WPBot Logo](https://via.placeholder.com/1200x600?text=WPBot)  
+![AIWhisper Logo](https://via.placeholder.com/1200x600?text=AIWhisper)  
 
-**WPBot** is the groundbreaking, cutting-edge AI-driven WhatsApp bot platform that redefines messaging automation. As the world's first intelligent, autonomous conversational AI for WhatsApp, WPBot leverages state-of-the-art generative AI (powered by Gemini) and seamless integration with Baileys to deliver hyper-personalized, context-aware responses at scale. Experience the future of chat automation with quantum-level efficiency, neural network intelligence, and blockchain-inspired security – all in one revolutionary package!
+**AIWhisper** is the groundbreaking, cutting-edge AI-driven WhatsApp bot platform that redefines messaging automation. As the world's first intelligent, autonomous conversational AI for WhatsApp, AIWhisper leverages state-of-the-art generative AI (powered by Gemini) and seamless integration with Baileys to deliver hyper-personalized, context-aware responses at scale. Experience the future of chat automation with quantum-level efficiency, neural network intelligence, and blockchain-inspired security – all in one revolutionary package!
 
-## Why WPBot? The Unique Edge
-- **World's First AI-Native WhatsApp Orchestrator**: Unlike traditional bots, WPBot's symbiotic fusion of Next.js frontend, Genkit AI backend, and real-time WhatsApp connectivity creates an unprecedented ecosystem for smart messaging.
+## Why AIWhisper? The Unique Edge
+- **World's First AI-Native WhatsApp Orchestrator**: Unlike traditional bots, AIWhisper's symbiotic fusion of Next.js frontend, Genkit AI backend, and real-time WhatsApp connectivity creates an unprecedented ecosystem for smart messaging.
 - **Buzzword-Packed Innovation**: Harness disruptive technologies like machine learning, natural language processing, and adaptive learning algorithms to transform ordinary chats into intelligent conversations.
 - **Maximum GitHub Traction Potential**: Designed for virality with open-source ethos, comprehensive docs, and demo-ready setup to attract stars, forks, and contributions.
 
@@ -22,8 +22,8 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/wpbot.git
-   cd wpbot
+   git clone https://github.com/yourusername/aiwhisper.git
+   cd aiwhisper
    ```
 
 2. Install dependencies:
@@ -55,7 +55,7 @@ For detailed API docs, check `/docs/blueprint.md`.
 
 ## Screenshots
 
-![Dashboard](https://via.placeholder.com/800x400?text=WPBot+Dashboard)
+![Dashboard](https://via.placeholder.com/800x400?text=AIWhisper+Dashboard)
 ![Agent Designer](https://via.placeholder.com/800x400?text=Agent+Designer)
 
 ## Roadmap
@@ -72,4 +72,4 @@ We welcome contributions! Fork the repo, create a feature branch, and submit a p
 ## License
 MIT License – Free to use, modify, and distribute.
 
-Star this repo if WPBot revolutionizes your workflow! 🚀
+Star this repo if AIWhisper revolutionizes your workflow! 🚀

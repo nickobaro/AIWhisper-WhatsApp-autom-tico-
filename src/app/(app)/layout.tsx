@@ -36,7 +36,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   const { toast } = useToast();
   const [user] = React.useState({
     name: 'Admin User',
-    email: 'admin@socketscribe.app',
+    email: 'admin@aiwhisper.app',
     avatar: `https://ui-avatars.com/api/?name=Admin+User&background=FF9800&color=fff`,
   });
   const [isLoggingOut, setIsLoggingOut] = React.useState(false);
@@ -71,7 +71,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             <Bot className="size-8 text-primary" />
             <div className="flex flex-col group-data-[collapsible=icon]:hidden">
               <span className="font-headline text-xl font-semibold">
-                SocketScribe
+                AIWhisper
               </span>
             </div>
           </div>
