@@ -113,3 +113,83 @@ export interface DashboardData {
   errorBreakdown: ErrorBreakdownPoint[];
   recentErrors: LogEntry[];
 }
+
+// ==========================================
+// EXTENSIÓN MULTIUSUARIO - AGREGAR AL FINAL
+// ==========================================
+
+export interface User {
+  id: string;
+  name: string;
+  email?: string;
+  createdAt: number;
+  isActive: boolean;
+  whatsappStatus: 'disconnected' | 'connecting' | 'connected' | 'error';
+  /** Agentes asignados a este usuario */
+  assignedAgentIds?: string[];
+  /** Configuraciones específicas del usuario */
+  settings?: {
+    timezone?: string;
+    language?: string;
+    notifications?: boolean;
+  };
+}
+
+export interface MultiUserWhatsAppState {
+  [userId: string]: {
+    sock: any | null;
+    status: 'connecting' | 'connected' | 'disconnected' | 'error';
+    qr: string | null;
+    account: { id: string; name: string } | null;
+    lastDisconnect: { reason: string; date: string } | null;
+    /** Stats específicas de este usuario */
+    stats?: Stats;
+  };
+}
+
+// Extender las interfaces existentes para soporte multiusuario
+export interface UserConversation extends Conversation {
+  /** Usuario propietario de esta conversación */
+  userId: string;
+}
+
+export interface UserMessage extends Message {
+  /** Usuario propietario de este mensaje */
+  userId: string;
+}
+
+export interface UserAgent extends Agent {
+  /** Usuario propietario de este agente */
+  userId: string;
+  /** Si está compartido entre usuarios */
+  isShared?: boolean;
+}
+
+export interface UserKnowledgeFile extends KnowledgeFile {
+  /** Usuario propietario del archivo */
+  userId: string;
+  /** Si está compartido entre usuarios */
+  isShared?: boolean;
+}
+
+export interface UserStats extends Stats {
+  /** Usuario específico */
+  userId: string;
+  /** Estadísticas por agente */
+  agentStats?: { [agentId: string]: Stats };
+}
+
+export interface UserLogEntry extends LogEntry {
+  /** Usuario que generó esta entrada */
+  userId: string;
+}
+
+// Dashboard multiusuario
+export interface MultiUserDashboardData {
+  /** Stats globales del sistema */
+  globalStats: DashboardData;
+  /** Stats por usuario */
+  userStats: { [userId: string]: DashboardData };
+  /** Usuarios activos */
+  activeUsers: User[];
+}
