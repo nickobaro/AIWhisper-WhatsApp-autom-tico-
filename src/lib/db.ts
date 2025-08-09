@@ -1,66 +1,120 @@
-
 import fs from 'fs/promises';
+
 import path from 'path';
+
 import type { Conversation, Message, Agent, Stats, KnowledgeFile, LogEntry } from '@/types';
 
+
 // NOTE: This is a simple file-based database for demonstration.
+
 // For a production environment, you should use a robust database like PostgreSQL or MongoDB.
 
 const DATA_DIR = path.join(process.cwd(), 'src', 'data');
 
+
 async function ensureDbFile(filename: string, defaultContent: string) {
+
     const filepath = path.join(DATA_DIR, filename);
+
     try {
+
         await fs.access(filepath);
+
     } catch {
+
         await fs.writeFile(filepath, defaultContent, 'utf-8');
+
     }
+
 }
 
+
 // Ensure all DB files exist on startup
+
 (async () => {
+
     await fs.mkdir(DATA_DIR, { recursive: true });
+
     await ensureDbFile('conversations.json', '[]');
+
     await ensureDbFile('messages.json', '[]');
+
     await ensureDbFile('agents.json', '[]');
+
     await ensureDbFile('knowledge.json', '[]');
+
     await ensureDbFile('logs.json', '[]');
+
     await ensureDbFile('stats.json', JSON.stringify({ sent: 0, received: 0, activeAgents: 0, errors: 0 }, null, 2));
+
 })();
 
 
+
 async function readFile<T>(filename: string): Promise<T> {
+
     const filepath = path.join(DATA_DIR, filename);
+
     const data = await fs.readFile(filepath, 'utf-8');
+
     if (!data || data.trim() === '') {
+
         // Empty file – reset to sane defaults
+
         const fallback = defaultForFile<T>(filename);
+
         await writeFile(filename, fallback);
+
         return fallback;
+
     }
+
     try {
+
         return JSON.parse(data) as T;
+
     } catch (err) {
+
         console.error(`Corrupt JSON in ${filename}, resetting.`, err);
+
         const fallback = defaultForFile<T>(filename);
+
         await writeFile(filename, fallback);
+
         return fallback;
+
     }
+
 }
+
 
 function defaultForFile<T>(filename: string): T {
+
     switch (filename) {
+
         case 'stats.json':
+
             return { sent: 0, received: 0, activeAgents: 0, errors: 0 } as unknown as T;
+
         default:
+
             return [] as unknown as T;
+
     }
+
 }
 
+
 async function writeFile<T>(filename: string, data: T): Promise<void> {
+
     const filepath = path.join(DATA_DIR, filename);
+
     await fs.writeFile(filepath, JSON.stringify(data, null, 2), 'utf-8');
+
 }
+
+
+
 
 // --- Conversations ---
 export async function getConversations(): Promise<Conversation[]> {
